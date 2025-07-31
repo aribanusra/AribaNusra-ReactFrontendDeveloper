@@ -18,7 +18,7 @@ A responsive React + TypeScript app with **Theme Switching**, **Tailwind CSS sty
 - ⚡️ Built with Vite for fast performance
 - 💅 Styled with Tailwind CSS
 - 💾 Theme persistence with Context API + localStorage
-- 🖼️ Fake Store API integration for product cards (optional)
+
 
 ---
 
@@ -33,7 +33,6 @@ A responsive React + TypeScript app with **Theme Switching**, **Tailwind CSS sty
 
 ---
 
-
 ## 🧠 Folder Structure
 
 ```bash
@@ -42,7 +41,8 @@ A responsive React + TypeScript app with **Theme Switching**, **Tailwind CSS sty
 │   ├── assets/
 │   ├── components/
 │   │   ├── Header.tsx
-│   │   ├── Footer.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── HamburgerMenu.tsx
 │   ├── context/
 │   │   └── ThemeContext.tsx
 │   ├── pages/
@@ -55,21 +55,54 @@ A responsive React + TypeScript app with **Theme Switching**, **Tailwind CSS sty
 ├── tailwind.config.js
 ├── vite.config.ts
 └── README.md
+```
+
+---
+
+## 🛠️ Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/ariba-nusra-react-theme-switcher.git
+   ```
+2. **Navigate to the project folder**
+   ```bash
+   cd AribaNusra-ReactFrontendDeveloper
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+4. **Start the dev server**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🎮 How to Use
+
+- **Theme Switching:**
+  - Use the theme dropdown in the sidebar (or header, depending on screen size and theme) to switch between Minimalist, Dark Sidebar, and Colorful themes.
+  - Your selected theme is saved and will persist on reload.
+- **Navigation:**
+  - Use the navigation links to switch between Home, About, and Contact pages.
+- **Product Cards:**
+  - The Home page fetches and displays products from the [Fake Store API](https://fakestoreapi.com/). This is always enabled for demo purposes.
+
+---
+
+## 🖼️ API Usage
+
+- The Home page fetches up to 16 products from the [Fake Store API](https://fakestoreapi.com/). No API key is required.
+- If the API is unavailable, an error will be logged in the console and the product grid will be empty.
+
+---
 
 
-# 1. Clone the repository
-git clone https://github.com/your-username/ariba-nusra-react-theme-switcher.git
 
-# 2. Navigate to the project folder
-cd aribanusra_frontenddeveloper
+## 👩‍💻 Author
 
-# 3. Install dependencies
-npm install
-
-# 4. Start the dev server
-npm run dev
-
-👩‍💻 Author
-Ariba Nusra
-Frontend Developer
-LinkedIn | GitHub
+**Ariba Nusra**  
+Frontend Developer  
+[LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)

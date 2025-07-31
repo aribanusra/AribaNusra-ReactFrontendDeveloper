@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
-type Theme = 'theme1' | 'theme2' | 'theme3';
+export type Theme = 'theme1' | 'theme2' | 'theme3';
 
 const ThemeContext = createContext({
   theme: 'theme1' as Theme,

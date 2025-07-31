@@ -17,14 +17,15 @@ const HamburgerMenu = ({ isOpen, setIsOpen }: Props) => {
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
-      {isOpen && (
-        <div className="absolute right-4 top-16 bg-white dark:bg-black shadow-lg rounded-md p-4 z-50">
-          <nav className="flex flex-col space-y-3">
-            <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
-            <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
-            <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
-          </nav>
-        </div>
+     {isOpen && (
+  <div className="absolute right-4 top-16 bg-white dark:bg-gray-900 text-black dark:text-white shadow-lg rounded-md p-4 z-50">
+    <nav className="flex flex-col space-y-3">
+      <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+      <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
+      <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+    </nav>
+  </div>
+
       )}
     </div>
   );

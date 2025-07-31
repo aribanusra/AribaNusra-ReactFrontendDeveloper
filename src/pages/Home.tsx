@@ -24,7 +24,7 @@ const { theme } = useTheme();
   return (
 <div
   className={`mt-16 max-w-screen-2xl px-4 space-y-12 mx-auto ${
-    theme === 'theme2' ? 'md:ml-64' : ''
+    theme === 'theme2' ? '' : ''
   }`}
 >
 

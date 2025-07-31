@@ -47,7 +47,11 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+        <footer className="w-full text-center py-4 bg-gray-100 text-gray-600 dark:bg-gray-900 dark:text-gray-300 mt-auto">
+      <p className="text-sm">© {new Date().getFullYear()} Ariba Nusra</p>
+    </footer>
     </div>
+    
   );
 };
 

@@ -96,7 +96,7 @@ const Contact = () => {
 
           {/* Store Info */}
           <motion.div
-            className="p-6 rounded-xl shadow-lg flex flex-col gap-4 justify-center"
+            className="p-6 mb-8 rounded-xl shadow-lg flex flex-col gap-4 justify-center"
             style={{ backgroundColor: 'var(--card-bg)' }}
             variants={fadeUp}
             initial="hidden"

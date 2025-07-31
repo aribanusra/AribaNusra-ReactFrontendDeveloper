@@ -1,12 +1,12 @@
 // components/Sidebar.tsx
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-
+import type { Theme } from '../context/ThemeContext';
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
 
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setTheme(e.target.value);
+    setTheme(e.target.value as Theme);
   };
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>

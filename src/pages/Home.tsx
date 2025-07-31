@@ -12,12 +12,16 @@ type Product = {
 };
 
 const Home = () => {
+  // State to hold the list of products
   const [products, setProducts] = useState<Product[]>([]);
-const { theme } = useTheme();
+  // Get the current theme from context
+  const { theme } = useTheme();
+
   useEffect(() => {
+    // Fetch products from the fake store API on component mount
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
-      .then((data) => setProducts(data.slice(0, 16))) // 16 products
+      .then((data) => setProducts(data.slice(0, 16))) // Limit to 16 products
       .catch((err) => console.error('Error fetching products:', err));
   }, []);
 
@@ -28,7 +32,7 @@ const { theme } = useTheme();
   }`}
 >
 
-      {/* Title & paragraph */}
+      {/* Title & paragraph section */}
       <section className="text-center space-y-4">
         <h1
           className="text-4xl font-bold tracking-tight"
@@ -47,15 +51,16 @@ const { theme } = useTheme();
         </button>
       </section>
 
-      {/* Product Grid */}
+      {/* Product Grid section */}
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+        {/* Render each product card */}
         {products.map((product) => (
           <div
             key={product.id}
             className="rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ backgroundColor: 'var(--card)', color: 'var(--text)' }}
           >
-            {/* Image */}
+            {/* Product image */}
             <div className="h-48 flex items-center justify-center bg-white p-3">
               <img
                 src={product.image}
@@ -64,7 +69,7 @@ const { theme } = useTheme();
               />
             </div>
 
-            {/* Content */}
+            {/* Product details */}
             <div className="p-4 space-y-2">
               <h2
                 className="font-semibold text-base mb-1 truncate"

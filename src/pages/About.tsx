@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// List of frequently asked questions for the About page
 const faqs = [
   {
     question: 'What makes StyleSphere unique?',
@@ -24,8 +25,10 @@ const faqs = [
 ];
 
 const About = () => {
+  // State to track which FAQ is open (expanded)
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  // Toggle the open/close state of an FAQ item
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -50,6 +53,7 @@ const About = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
+          {/* Storefront and team images for visual appeal */}
           <img
             src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1170&auto=format&fit=crop"
             alt="Storefront"
@@ -63,6 +67,7 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-14">
+          {/* Mission card */}
           <div
             className="p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             style={{ backgroundColor: 'var(--card-bg)' }}
@@ -75,6 +80,7 @@ const About = () => {
             </p>
           </div>
 
+          {/* Why Choose Us card */}
           <div
             className="p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             style={{ backgroundColor: 'var(--card-bg)' }}
@@ -93,6 +99,7 @@ const About = () => {
         <section>
           <h2 className="text-3xl font-bold mb-6">FAQs</h2>
           <div className="space-y-4 mb-24">
+            {/* Render each FAQ with expand/collapse logic */}
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -107,6 +114,7 @@ const About = () => {
                   {faq.question}
                   <span className="text-xl">{openIndex === index ? '−' : '+'}</span>
                 </button>
+                {/* Show answer if this FAQ is open */}
                 {openIndex === index && (
                   <div className="px-6 pb-4 text-sm text-gray-600 transition-all duration-300 ease-in-out">
                     {faq.answer}

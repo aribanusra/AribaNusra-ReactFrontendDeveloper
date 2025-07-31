@@ -2,13 +2,17 @@
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import type { Theme } from '../context/ThemeContext';
+
 const Sidebar = () => {
+  // Get the current theme and theme setter from context
   const { theme, setTheme } = useTheme();
 
+  // Handle theme selection from the dropdown
   const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTheme(e.target.value as Theme);
   };
 
+  // Function to determine the class for active/inactive nav links
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `block px-4 py-2 text-base font-semibold ${
       isActive ? 'bg-gray-700 text-white' : 'text-gray-300'
@@ -22,14 +26,17 @@ const Sidebar = () => {
         color: 'var(--header-text)',
       }}
     >
+      {/* Sidebar title */}
       <div className="text-2xl font-bold mb-4">🌙 Dark Sidebar</div>
 
+      {/* Navigation links */}
       <nav className="flex flex-col gap-2">
         <NavLink to="/" className={navLinkClass}>HOME</NavLink>
         <NavLink to="/about" className={navLinkClass}>ABOUT</NavLink>
         <NavLink to="/contact" className={navLinkClass}>CONTACT</NavLink>
       </nav>
 
+      {/* Theme selection dropdown */}
       <select
         value={theme}
         onChange={handleThemeChange}

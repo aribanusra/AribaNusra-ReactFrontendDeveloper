@@ -5,7 +5,7 @@ import { useTheme } from '../context/ThemeContext';
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
 
-  const handleThemeChange = (e) => {
+  const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTheme(e.target.value);
   };
 

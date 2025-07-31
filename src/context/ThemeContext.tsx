@@ -4,7 +4,7 @@ type Theme = 'theme1' | 'theme2' | 'theme3';
 
 const ThemeContext = createContext({
   theme: 'theme1' as Theme,
-  setTheme: (theme: Theme) => {},
+  setTheme: (_theme: Theme) => {},
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {

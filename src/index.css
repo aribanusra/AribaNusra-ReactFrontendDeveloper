@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme 1: Minimalist Light */
+.theme1 {
+  --bg: #ffffff;
+  --text: #111827;
+  --font: 'Inter', sans-serif;
+
+  --header-bg: #f9fafb;
+  --header-text: #1f2937;
+
+  --base-font-size: 16px;
+  --heading-size: 1.5rem;
+  --card-padding: 1rem;
+  --section-margin: 2rem;
+}
+
+/* Theme 2: Dark with Sidebar */
+.theme2 {
+  --bg: #1f2937;
+  --text: #f9fafb;
+  --font: 'Merriweather', serif;
+
+  --header-bg: #111827;
+  --header-text: #f3f4f6;
+
+  --base-font-size: 17px;
+  --heading-size: 1.75rem;
+  --card-padding: 1.5rem;
+  --section-margin: 2.5rem;
+}
+
+/* Theme 3: Colorful and Fun */
+.theme3 {
+  --bg: #e4ccd8;
+  --text: #4a044e;
+  --font: 'Pacifico', cursive;
+
+  --header-bg: #f472b6;
+  --header-text: #680b41;
+
+  --card-bg: #ffe4e6;
+  --button-bg: #f472b6;
+  --button-text: #fff;
+
+  --base-font-size: 18px;
+  --heading-size: 2rem;
+  --card-padding: 2rem;
+  --section-margin: 3rem;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--base-font-size);
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-size: var(--heading-size);
+  margin-bottom: 1rem;
+}
+
+.section {
+  margin: var(--section-margin) auto;
+  padding: 1rem;
+}
+
+.card {
+  padding: var(--card-padding);
+  background-color: var(--card-bg, #fff);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
